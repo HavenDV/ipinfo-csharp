@@ -1,6 +1,4 @@
-﻿using Newtonsoft.Json;
-
-namespace IpInfo;
+﻿namespace IpInfo;
 
 public partial class IpInfoApi
 {
@@ -18,7 +16,7 @@ public partial class IpInfoApi
         return dictionary.ToDictionary(
             pair => pair.Key,
             pair =>
-                JsonConvert.DeserializeObject<FullResponse>(pair.Value.ToString()) ??
+                JsonSerializer.Deserialize<FullResponse>(pair.Value.ToString() ?? string.Empty) ??
                 throw new InvalidOperationException($"FullResponse is null for {pair.Key}."));
     }
 }
