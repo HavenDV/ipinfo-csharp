@@ -1,10 +1,11 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>netstandard2.0;net4.5</TargetFrameworks>
+    <TargetFrameworks>netstandard2.0;net4.5.1</TargetFrameworks>
   </PropertyGroup>
 
   <PropertyGroup Label="Nuget">
+    <PackageId>H.$(AssemblyName)</PackageId>
     <Description>This is the official C# client library for the IPinfo.io IP address API, allowing you to lookup your own IP address, or get any of the following details for an IP:
 
 - IP geolocation / geoIP data (city, region, country, postal code, latitude and longitude)
@@ -26,21 +27,13 @@
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
   </ItemGroup>
 
-  <ItemGroup Condition="'$(TargetFramework)' == 'net4.5'">
+  <ItemGroup Condition="'$(TargetFramework)' == 'net4.5.1'">
     <Reference Include="System.Net.Http" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
   </ItemGroup>
 
   <ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.0'">
     <PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
-  </ItemGroup>
-
-  <ItemGroup Condition=" '$(TargetFramework)' == 'net4.0' ">
-    <Reference Include="System.Net.Http" />
-    <Reference Include="System.ComponentModel.DataAnnotations" />
-    <PackageReference Include="ReadOnlyCollectionInterfaces" Version="1.0.0" />
-    <PackageReference Include="Microsoft.Bcl.Async" Version="1.0.168" />
-    <PackageReference Include="Microsoft.Net.Http" Version="2.2.29" />
   </ItemGroup>
 
 </Project>

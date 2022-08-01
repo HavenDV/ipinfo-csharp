@@ -3,6 +3,7 @@
   <Import Project="..\Directory.Build.props" />
 
   <PropertyGroup Label="Common">
+    <!-- https://github.com/dotnet/runtime/blob/main/docs/design/features/globalization-invariant-mode.md -->
     <InvariantGlobalization>true</InvariantGlobalization>
   </PropertyGroup>
   
@@ -12,21 +13,16 @@
   </PropertyGroup>
 
   <ItemGroup Label="CLSCompliant">
-    <Compile Include="$(SolutionDir)src\CLSCompliantTrue.cs" />
+    <AssemblyAttribute Include="System.CLSCompliantAttribute">
+      <_Parameter1>true</_Parameter1>
+    </AssemblyAttribute>
   </ItemGroup>
   
   <PropertyGroup Label="Nuget">
-    <BUILD_NUMBER Condition="'$(BUILD_NUMBER)' == ''">1</BUILD_NUMBER>
-    <Version>1.1.$(BUILD_NUMBER)</Version>
-    <PackageReleaseNotes>$(PACKAGE_RELEASE_NOTES)</PackageReleaseNotes>
     <GeneratePackageOnBuild Condition=" '$(Configuration)' == 'Release' ">true</GeneratePackageOnBuild>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
-    <Authors>IpInfo</Authors>
-    <Company>IpInfo</Company>
-    <Copyright>Copyright © IpInfo 2021</Copyright>
-    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
-    <PackageProjectUrl>https://ipinfo.io/</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/ipinfo/csharp/</RepositoryUrl>
+    <Authors>havendv</Authors>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageIcon>nuget_icon.png</PackageIcon>
     <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
@@ -34,17 +30,14 @@
   <ItemGroup Label="Nuget">
     <None Include="$(SolutionDir)assets\nuget_icon.png" Pack="true" PackagePath="\"/>
     <None Include="$(SolutionDir)README.md" Pack="true" PackagePath="\"/>
+    <PackageReference Include="ConventionalCommitsGitInfo" Version="0.3.5">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
   </ItemGroup>
 
-  <PropertyGroup Label="Source Link">
-    <PublishRepositoryUrl>true</PublishRepositoryUrl>
-    <EmbedAllSources>true</EmbedAllSources>
-    <IncludeSymbols>true</IncludeSymbols>
-    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
-  </PropertyGroup>
-
   <ItemGroup Label="Source Link">
-    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0">
+    <PackageReference Include="DotNet.ReproducibleBuilds" Version="1.1.1">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
