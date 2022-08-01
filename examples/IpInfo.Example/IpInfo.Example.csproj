@@ -9,7 +9,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="IpInfo" Version="1.0.5" />
+    <ProjectReference Include="..\..\src\libs\IpInfo\IpInfo.csproj" />
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)' == 'net4.6.1'">
+    <Reference Include="System.Net.Http" />
   </ItemGroup>
 
 </Project>
