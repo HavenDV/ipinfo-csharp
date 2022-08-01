@@ -1,11 +1,6 @@
 <Project>
 
   <Import Project="..\Directory.Build.props" />
-
-  <PropertyGroup Label="Common">
-    <!-- https://github.com/dotnet/runtime/blob/main/docs/design/features/globalization-invariant-mode.md -->
-    <InvariantGlobalization>true</InvariantGlobalization>
-  </PropertyGroup>
   
   <PropertyGroup Label="Signing">
     <SignAssembly>true</SignAssembly>
