@@ -2,7 +2,6 @@
 
   <PropertyGroup>
     <TargetFrameworks>netstandard2.0;net4.6.1;net6.0</TargetFrameworks>
-    <WarningsAsErrors>$(WarningsAsErrors);NSG001</WarningsAsErrors>
   </PropertyGroup>
   
   <ItemGroup>
@@ -25,7 +24,7 @@
   </ItemGroup>
   
   <ItemGroup>
-    <PackageReference Include="H.NSwag.Generator" Version="13.15.10.62">
+    <PackageReference Include="H.NSwag.Generator" Version="13.15.10.63">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
