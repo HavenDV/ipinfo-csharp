@@ -24,7 +24,7 @@ The free plan is limited to 50,000 requests per month, and doesn't include some 
 
 ## Nuget
 
-[![NuGet](https://img.shields.io/nuget/dt/H.IpInfo.svg?style=flat-square&label=IpInfo)](https://www.nuget.org/packages/H.IpInfo/)
+[![NuGet](https://img.shields.io/nuget/dt/H.IpInfo.svg?style=flat-square&label=H.IpInfo)](https://www.nuget.org/packages/H.IpInfo/)
 
 ```
 Install-Package H.IpInfo
