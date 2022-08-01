@@ -1,11 +1,14 @@
 # Unofficial generated IPinfo C# Client Library based on OpenAPI spec
 
-This is the unofficial C# client library for the IPinfo.io IP address API, allowing you to lookup your own IP address, or get any of the following details for an IP:
+This is the unofficial C# client library for the IPinfo.io IP address API, allowing you to lookup your own IP address, 
+or get any of the following details for an IP:
 
  - [IP geolocation / geoIP data](https://ipinfo.io/ip-geolocation-api) (city, region, country, postal code, latitude and longitude)
- - [ASN details](https://ipinfo.io/asn-api) (ISP or network operator, associated domain name, and type, such as business, hosting or company)
+ - [ASN details](https://ipinfo.io/asn-api) (ISP or network operator, associated domain name, and type, such as business, hosting 
+ or company)
  - [Firmographics data](https://ipinfo.io/ip-company-api) (the name and domain of the business that uses the IP address)
- - [Carrier information](https://ipinfo.io/ip-carrier-api) (the name of the mobile carrier and MNC and MCC for that carrier if the IP is used exclusively for mobile traffic)
+ - [Carrier information](https://ipinfo.io/ip-carrier-api) (the name of the mobile carrier and MNC and MCC for that carrier 
+ if the IP is used exclusively for mobile traffic)
 
 Pros compared to the new official version:
 - Almost completely generated based on the OpenAPI specification, which eliminates errors when writing boiler plate code
@@ -18,9 +21,11 @@ Cons:
 
 ## Getting Started
 
-You'll need an IPinfo API access token, which you can get by singing up for a free account at [https://ipinfo.io/signup](https://ipinfo.io/signup).
+You'll need an IPinfo API access token, which you can get by singing up for a free account 
+at [https://ipinfo.io/signup](https://ipinfo.io/signup).
 
-The free plan is limited to 50,000 requests per month, and doesn't include some of the data fields such as IP type and company data. To enable all the data fields and additional request volumes see [https://ipinfo.io/pricing](https://ipinfo.io/pricing)
+The free plan is limited to 50,000 requests per month, and doesn't include some of the data fields such as IP type and company data. 
+To enable all the data fields and additional request volumes see [https://ipinfo.io/pricing](https://ipinfo.io/pricing)
 
 ## Nuget
 
